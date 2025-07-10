@@ -12,7 +12,7 @@ export async function applyToJob(token, _, jobData) {
     .upload(fileName, jobData.resume);
 
   if (storageError) {
-    throw new Error("Error uploading Resume");
+    throw new Error("Error uploading Resume",storageError);
     return null;
   }
 
