@@ -9,6 +9,7 @@ import SavedJobs from "./pages/SavedJobs"
 import MyJobs from "./pages/MyJobs"
 import './app.css';
 import { ThemeProvider } from "./components/ui/theme-provider"
+import ProtectedRoute from "./components/ProtectedRoute"
 
 
 const router = createBrowserRouter([
@@ -21,27 +22,51 @@ const router = createBrowserRouter([
       },
       {
         path:"/onboarding",
-        element:<OnboardingPage/>
+        element:(
+          <ProtectedRoute>
+            <OnboardingPage/>
+          </ProtectedRoute>
+        )
       },
       {
         path:"/jobs",
-        element:<JobListing/>
+        element:(
+          <ProtectedRoute>
+            <JobListing/>
+          </ProtectedRoute>
+        )
       },
       {
         path:"/job/:id",
-        element:<JobPage/>
+        element:(
+          <ProtectedRoute>
+            <JobPage/>
+          </ProtectedRoute>
+        )
       },
       {
         path:"/post-job",
-        element:<PostJobs/>
+        element:(
+          <ProtectedRoute>
+            <PostJobs/>
+          </ProtectedRoute>
+        )
       },
       {
-        path:"/saved-job",
-        element:<SavedJobs/>
+        path:"/saved-jobs",
+        element:(
+          <ProtectedRoute>
+            <SavedJobs/>
+          </ProtectedRoute>
+        )
       },
       {
-        path:"/my-job",
-        element:<MyJobs/>
+        path:"/my-jobs",
+        element:(
+          <ProtectedRoute>
+            <MyJobs/>
+          </ProtectedRoute>
+        )
       },
 
     ]

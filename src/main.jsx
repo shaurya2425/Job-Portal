@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { ClerkProvider } from '@clerk/clerk-react'
-import { dark } from '@clerk/themes'
+import { dark, shadesOfPurple } from '@clerk/themes'
 
 
 // Import your Publishable Key

@@ -92,9 +92,9 @@ function LandingPage() {
 
           return (
             <AccordionItem key={index} value={`item-${index+1}`}>
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionTrigger>{faq.question}</AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            {faq.answer}
           </AccordionContent>
         </AccordionItem>
         
