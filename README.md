@@ -1,5 +1,7 @@
 # 🏆 HIRRD - Modern Job Portal for Recruiters & Candidates
 
+[🌐 **Live Demo**](https://job-portal-shaurya-rajputs-projects.vercel.app/)
+
 **Hirrd** is a next-gen, full-featured job portal built using **React.js**, **Tailwind CSS**, **Supabase**, and **Clerk Auth**. It enables seamless job creation, candidate applications, and role-based user experience — tailored for the modern hiring workflow.
 
 > “In the hiring world, timing and visibility is everything — Hirrd gives you both.”
