@@ -132,8 +132,16 @@ export async function getSavedJobs(token) {
   const supabase = await supabaseClient(token);
   const { data, error } = await supabase
         .from("saved_jobs")
-        .select("id, jobs!saved_jobs_job_id_fkey(*)");
-
+.select(`
+  *,
+  job:jobs!saved_jobs_job_id_fkey (
+    *,
+    company:companies!company_id (
+      name,
+      logo_url
+    )
+  )
+`)
   if (error) {
     console.error("Error fetching Saved Jobs:", error);
     return null;

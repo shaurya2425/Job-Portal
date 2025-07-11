@@ -36,7 +36,7 @@ function SavedJobs() {
               return (
                 <JobCard
                   key={saved.id}
-                  job={saved?.jobs}
+                  job={saved?.job}
                   onJobAction={fnSavedJobs}
                   savedInit={true}
                 />
