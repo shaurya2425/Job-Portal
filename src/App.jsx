@@ -7,7 +7,6 @@ import JobPage from "./pages/JobPage"
 import PostJobs from "./pages/PostJobs"
 import SavedJobs from "./pages/SavedJobs"
 import MyJobs from "./pages/MyJobs"
-import './app.css';
 import { ThemeProvider } from "./components/ui/theme-provider"
 import ProtectedRoute from "./components/ProtectedRoute"
 
