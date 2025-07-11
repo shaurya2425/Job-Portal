@@ -79,7 +79,7 @@ function Header() {
 
       {showSignIn && 
         <div
-          className="fixed inset-0 flex items-center justify-center "
+          className="fixed inset-0 flex items-center justify-center bg-black/50"
           onClick={handleOverlayClick}
         >
           <SignIn
