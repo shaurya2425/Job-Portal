@@ -101,7 +101,7 @@ function PostJobs() {
        {errors.description && <p className='text-red-500' >{errors.description.message}</p> }
 
       
-      <div className='w-full flex gap-4 items-center' >
+      <div className='w-full flex-col sm:flex-row gap-4 items-center  ' >
           <Controller 
                       name='location'
                       control={control}
@@ -110,7 +110,7 @@ function PostJobs() {
                           value={field.value} 
                           onValueChange={field.onChange}
                           >
-                            <SelectTrigger className='sm:w-1/2' >
+                            <SelectTrigger className='sm:w-1/2 mb-2' >
                                 <SelectValue placeholder='Filter by Location' />
                             </SelectTrigger>
                             <SelectContent>
@@ -134,7 +134,7 @@ function PostJobs() {
                             value={field.value} 
                              onValueChange={field.onChange }
                           >
-                                  <SelectTrigger  className='sm:w-1/2' >
+                                  <SelectTrigger  className='sm:w-1/2 mb-2' >
                                       <SelectValue placeholder='Filter by Company'>
                                         {companies?.find((com) => com.id === Number(field.value))?.name || "Company"}
                                       </SelectValue>
