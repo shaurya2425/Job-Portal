@@ -81,7 +81,7 @@ function LandingPage() {
             <CardTitle>For Employers</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Post jobs, manage applications. and find the best candidates.</p>
+            <p>Post jobs, manage applications and find the best candidates.</p>
           </CardContent>
           
         </Card>
