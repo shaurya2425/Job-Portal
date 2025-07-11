@@ -55,3 +55,29 @@ export async function updateApplicationStatus(token,{job_id},status){
         }       
     return data;
 }
+
+
+export async function getApplications(token,{user_id}){
+
+    const supabase = await supabaseClient(token);
+
+    
+    const { data, error } = await supabase
+                            .from("applications")
+                            .select(`
+                              *,
+                              job:jobs!applications_job_id_fkey (
+                                title,
+                                company:companies!company_id (
+                                  name
+                                )
+                              )
+                            `)
+                            .eq('candidate_id',user_id)
+
+        if (error) {
+            console.error("Error Fetching Applications:", error);
+            return null;
+        }       
+    return data;
+}
